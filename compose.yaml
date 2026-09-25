@@ -1,6 +1,6 @@
 services:
   atlas:
-    image: aidarchik/java-atlas:latest
+    image: aidarchik/java-atlas:1.0
     pull_policy: always
     ports:
       - "8000:8000"
