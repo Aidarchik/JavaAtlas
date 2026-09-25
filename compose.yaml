@@ -1,0 +1,7 @@
+services:
+  atlas:
+    image: aidarchik/java-atlas:latest
+    pull_policy: always
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

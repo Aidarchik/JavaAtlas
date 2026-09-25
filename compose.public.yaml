@@ -1,0 +1,23 @@
+services:
+  atlas:
+    build: .
+    image: java-atlas:latest
+    restart: unless-stopped
+  caddy:
+    image: caddy:2-alpine
+    environment:
+      ATLAS_DOMAIN: ${ATLAS_DOMAIN:?Set ATLAS_DOMAIN to a domain pointing at this server}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - atlas
+    restart: unless-stopped
+volumes:
+  caddy_data:
+  caddy_config:

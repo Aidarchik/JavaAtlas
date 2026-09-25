@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101624">
+  <meta name="description" content="Интерактивный курс и шпаргалка по Java на основе конспектов и вопросов для собеседований">
+  <title>Java Atlas — курс и шпаргалка</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Навигация по курсу">
+      <a class="brand" href="#/" aria-label="Java Atlas, главная"><span class="brand-icon">{ }</span><span>java<span class="brand-accent">atlas</span><small>КУРС · ШПАРГАЛКА</small></span></a>
+      <div class="sidebar-label">НАВИГАЦИЯ</div>
+      <nav class="main-nav" id="main-nav"></nav>
+      <div class="sidebar-bottom"><div class="sidebar-tip">⌘ &nbsp; Всё нужное по Java<br><span>в одном месте, без лишних вкладок.</span></div><a href="#/library">Библиотека материалов <span>↗</span></a></div>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+    <div class="workspace">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menu-btn" aria-label="Открыть меню">☰</button>
+        <div class="breadcrumbs" id="breadcrumbs">Курс <span>/</span> Обзор</div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Поиск по вопросам и материалам…" autocomplete="off" aria-label="Поиск по курсу"><kbd>/</kbd></label>
+        <button class="top-library" id="library-btn" title="Открыть библиотеку">◫ <span>Источники</span></button>
+      </header>
+      <main id="content" tabindex="-1"><div class="loading">Загружаем курс…</div></main>
+    </div>
+  </div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
